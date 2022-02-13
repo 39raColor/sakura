@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>「さくらいろ」の世界へ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="front-detection" content="telephone=no">
+  <!-- 他のSNSに張る時用 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://zakity8.github.io/sakura/" />
+  <meta property="og:title" content="さくらカラー" />
+  <meta property="og:description" content="「さくらいろ」の世界へようこそ" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/zakity8/sakura/main/images/og/shrine.png" />
+  <!-- ショートカット用アイコン -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <!-- Function JS FILE -->
+  <script src="./js/function/listen_event.js" async type="text/javascript"></script>
+  <script src="./js/function/main.js" async type="text/javascript"></script>
+  <script src="./js/function/init.js" async type="text/javascript"></script>
+  <script src="./js/function/function.js" async type="text/javascript"></script>
+  <script src="./js/function/convert.js" async type="text/javascript"></script>
+  <!-- Utility JS FILE -->
+  <script src="./js/utility/opencv.js" async type="text/javascript"></script>
+  <script src="./js/utility/param.js" async type="text/javascript"></script>
+  <script src="./js/utility/name_space.js" async type="text/javascript"></script>
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <link rel="stylesheet" href="./css/class.css" type="text/css">
+  <link rel="stylesheet" href="./css/id.css" type="text/css">
+</head>
+
+<body>
+  <div class="headerContainer">
+    <span class="headerTtl">さくらカラー</span>
+    <div class="header--right">
+      <a href="https://github.com/zakity8/sakura" target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--radius">GitHub</a>
+      <a href="https://twitter.com/39ra_color" target="_blank" rel="noopener noreferrer" class="btn btn--blue btn--radius">Twitter</a>
+    </div>
+  </div>
+  <duv class="mainContainer">
+    <div class="contents" id="firstPage" style="display: none;">
+      <div class="contentItems">
+        <div><img src="./images/icon/inputPics.svg" id="mainStartBtn" alt="画像選択" width="100px" height="auto" onclick="input.click();" /></div>
+        <div><a href="#" id="subStartBtn" style="color: #FFF;" onclick="input.click();">画像を読み込み</a></div>
+        <input type="file" id="inputFile" name="fele" accept=".jpg, .jpeg, .png" style="display:none;" />
+      </div>
+    </div>
+    <div class="contents" id="secondPage" style="display:none;">
+      <div class="contentItems">
+        <div class="canvas" id="inputCanvas">
+          <img src="" id="showSrcImg" height="200"/>
+          <img src="" id="hiddenSrcImg" style="display: none;" />
+        </div>
+        <div class="canvas" id="cvtCanvas">
+          <canvas id="showCvtImg"></canvas>
+          <canvas id="hiddenCvtImg" style="display: none;"><canvas>
+        </div>
+        <div>
+          <ul style="padding-inline-start:0px; display:flex; justify-content:center; list-style:none;">
+            <li id="homeIcon"><img src="./images/icon/home.svg" class="icons" width="60px" height="auto"
+              onclick="tohome.click();"></li>
+            <li id="sakuraIcon"><img src="./images/icon/sakura.svg" class="icons" width="60px" height="auto"
+              onclick="g2pbtn.click();"></li>
+            <li id="dlIcon"><img src="./images/icon/download.svg" class="icons" width="60px" height="auto"
+              onclick="dl.click();"></li>
+            <li id="changeIcon"><img src="./images/icon/change.svg" class="icons" width="60px" height="auto"
+              onclick="tochange.click();"></li>
+          </ul>
+          <input type="button" value="Home" id="homeBtn" style="display:none;" />
+          <input type="button" value="Sakura" id="cvtBtn" style="display:none;" />
+          <input type="button" value="Change" id="changeBtn" style="display:none;" />
+          <a href="#" id="download" download="converted.png" style="display:none"></a>
+        </div>
+      </div>
+    </div>
+  </duv>
+  <div class="footerContainer">
+    <div id="copyRight">&copy;2021
+      <script>new Date().getFullYear() > 2021 && document.write("-" + new Date().getFullYear());</script> GRconverter
+    </div>
+  </div>
+</body>
+
+
+</html>

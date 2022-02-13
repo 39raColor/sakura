@@ -1,0 +1,33 @@
+#Title *{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+#Title {
+    background-color: #151514;
+    width: 100%;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 2em 0;
+}
+  
+#Canvas {
+    background: #9EE;
+}
+#copyRight {
+    color: black;
+    text-align: center;
+}
+#mainStartBtn {
+    cursor : pointer;
+}
+#subStartBtn {
+    cursor : pointer;
+    text-decoration: none;
+}
+
+#firstPage.dragover {
+    background-color: rgb(255, 200, 200);
+}

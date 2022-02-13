@@ -1,0 +1,114 @@
+.headerContainer {
+    background-color: rgb(255, 212, 232);
+    position: fixed; /* 一番上固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    width: 100%;
+    height: 80px;
+}
+.headerTtl {
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    color: rgb(59, 163, 115);
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.1em
+}
+.header--right {
+    position: absolute;
+    right: 20px;
+}
+@media screen and (max-width: 700px) {
+    .headerTtl {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header--right {
+        position: fixed;
+        top: 90px;
+        left: 10px;
+    }
+}
+.footerContainer {
+    background-color: #FFFF00;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    width: 100%;
+}
+.contents {
+    /*background-color: #a8a8a8;*/
+    width: 100%;
+    min-height: 520px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+}
+
+.contentItems {
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.icons {
+    margin: 0 1em;
+    cursor : pointer;
+}
+.canvas{
+    text-align: center;
+}
+
+.btn--dark,
+a.btn--dark {
+  color: #fff;
+  background-color: #555555;
+}
+.btn--dark:hover,
+a.btn--dark:hover {
+  color: #fff;
+  background: #888888;
+}
+
+.btn--blue,
+a.btn--blue {
+  color: #fff;
+  background-color: #37bbe4;
+}
+.btn--blue:hover,
+a.btn--blue:hover {
+  color: #fff;
+  background: #63d7fa;
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+
+.btn {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 0.7;
+    position: relative;
+    display: inline-block;
+    padding: 0.9rem 0.9rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: .1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
